@@ -46,7 +46,7 @@ public class SaletaxApplication {
 
 
                 if (linecount > 0 && shoppingbasket != prevshoppingbasket ) {
-                    display(cartList);
+                    display(cartList, shoppingbasket - 1); // take the previous output
                     cartList.clear();
                 }
                 cart = new Shoppingcart(quantity,itemname,itemprice,salestax,importtax);
@@ -56,16 +56,17 @@ public class SaletaxApplication {
 
                 ++linecount;
         }
-            display(cartList);
+            display(cartList, shoppingbasket);
 
     }
 
 
 }
 
-    private static void display(List<Shoppingcart> cartList) {
+    private static void display(List<Shoppingcart> cartList, int basketnum) {
         double totalsalestax = 0;
         double totalcost = 0.0;
+        System.out.println("Output " + basketnum);
         for (Shoppingcart cart : cartList) {
 
             System.out.printf(cart.getQuantity() + " " + cart.getItemname() + " ");
@@ -77,6 +78,6 @@ public class SaletaxApplication {
         System.out.printf("Sales taxes: " );
         System.out.printf("%.2f\n" , totalsalestax);
         System.out.printf("Total: " );
-        System.out.printf("%.2f\n" , totalcost);
+        System.out.printf("%.2f\n\n" , totalcost);
     }
-    }
+ }
