@@ -1,7 +1,8 @@
 # GPC Coding Assignment - PROBLEM TWO: SALES TAXES
 
 I have created a main application SaletaxApplication. which reads an input file called SHOPPINGCARTS.csv and stores each line into 
-a Shoppingcart object which in tutn has the logic to calculate the sales tax and the resulting total cost .
+a Shoppingcart object which in tutn has the logic to calculate the sales tax and the resulting total cost . The last 2 columns of the csv has the sales tax and 
+the import sales tax respectively .
 
 I created the function below to return the nearest rounded up to the nearest 0.05 amount of sales tax.
 public double round05(double num) {
