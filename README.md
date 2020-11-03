@@ -1,4 +1,4 @@
-# GPCAssignment
+# GPC Coding Assignment - Problem # 2 
 
 I have created a main application SaletaxApplication. which reads an input file called SHOPPINGCARTS.csv and stores each line into 
 a Shoppingcart object which in tutn has the logic to calculate the sales tax and the resulting total cost .
